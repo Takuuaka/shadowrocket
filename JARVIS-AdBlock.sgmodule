@@ -1,0 +1,22 @@
+#!name=J.A.R.V.I.S. AdBlock
+
+#!desc=Lee's own ad-block module. Rule sources: AdGuard Base filter、AdGuard Chinese filter、AdGuard Mobile Ads filter、AdGuard DNS filter、EasyList、EasyList China、jiekouAD、AWAvenue Ads Rule、OISD Basic、hagezi DNS-Blocklists PRO mini、StevenBlack hosts、Pollock hosts、EasyPrivacy、neodevhost. Whitelist is enforced first (DIRECT), then the remote rule set.
+
+#!homepage=https://github.com/Takuuaka/shadowrocket
+
+#!version=20261126020616
+
+#!updated=2026/11/26 02:06:16 UTC
+
+[Rule]
+
+# Whitelist (explicit allow, evaluated before the block list):
+DOMAIN-SUFFIX,cnnic.cn,DIRECT
+DOMAIN-SUFFIX,cnnic.com.cn,DIRECT
+DOMAIN-SUFFIX,cnnic.net,DIRECT
+DOMAIN-SUFFIX,cnnic.net.cn,DIRECT
+DOMAIN-SUFFIX,video.qq.com,DIRECT
+DOMAIN-SUFFIX,v.qq.com,DIRECT
+
+# Block list (remote rule set, auto-updates when rebuilt):
+RULE-SET,https://raw.githubusercontent.com/Takuuaka/shadowrocket/main/JARVIS-AdBlock.list,REJECT
